@@ -11,3 +11,5 @@ for(let i=0; i<array.length; i++){
    
 }
 console.log(`userInput:${userInput} it occurrs ${position.length} times at index ${position}`)
+
+for(i=0;i<position.length;i++) console.log(`the corresponding positions are ${position[i]+1}`)

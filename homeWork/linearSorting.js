@@ -12,7 +12,7 @@ for(i=0; i<arr.length-1; i++){
         }
     }
 }
-console.log("ascdendingOrder:"+ arr)
+console.log("ascendingOrder:"+ arr)
 
 //sorting in descending order
 var arr = [10,-1,8,-2,0]
