@@ -1,0 +1,31 @@
+
+body{
+    background-color:  #f0efed;
+}
+
+.center button{
+    font-family: Arial;
+    background-color: #1a2456;
+    color: white;
+}
+
+.center button:hover{
+    background:goldenrod;
+}
+
+h1 { text-align: center; }
+
+#one {
+
+    background: white;
+
+}
+
+
+
+
+
+
+
+
+  
