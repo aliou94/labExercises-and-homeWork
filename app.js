@@ -31,9 +31,13 @@ const test = (town) => {
         button.innerHTML = "what did the police do ?";
         button.id = "toggle";
 
-        button.addEventListener("click", function () {
+        button.addEventListener("mouseover", function () {
           para.innerHTML = resolution[i];
           li.appendChild(para);
+        });
+        button.addEventListener("mouseout", function () {
+          // para.innerHTML = '';
+          li.removeChild(para);
         });
         li.innerHTML = `${complaint[i]}`;
         ul1.appendChild(li);
