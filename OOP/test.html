@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <p id='circle'></p>
+    <p id='rectangle'></p>
+    <p id='squaer'></p>
+</body>
+<script>
+
+    class Circle {
+      constructor(diameter) {
+        this.diameter = diameter;
+      }
+    
+      // Write a function called circle_area that returns the area of the object.
+      circle_area() {
+        let rad = this.radius();
+        return Math.PI * (rad * rad);
+        // return Math.PI(area * area);
+      }
+    
+      // Write a function total_radius that returns the radius of the object.
+      radius() {
+        let r = this.diameter;
+        return r / 2;
+      }
+    
+      displayCircle() {
+    let area = this.circle_area();
+    let radius = this.radius();
+    let text = document.getElementById('circle').innerHTML = `Area is equal to: ${area}. Radius is equal to:  ${radius}`;
+    return text;
+  }
+
+    }
+    const circle1 = new Circle(20);
+    circle1.displayCircle();
+
+
+
+class Rectangle {
+  constructor(length, width) {
+    this.length = length;
+    this.width = width;
+  }
+
+
+  rectangle_area() {
+    return this.length * this.width;
+  }
+
+
+  parameter() {
+    return this.length * 2 + this.width * 2;
+  }
+
+  displayRectangle() {
+    let area = this.rectangle_area();
+    let parameter = this.parameter();
+ let  text = document.getElementById('rectangle')
+    text.innerHTML = `Area is equal to: ${area}. Parameter is equal to:  ${parameter}.`
+  
+  return text
+  }
+}
+
+const rec = new Rectangle(30, 23);
+// rec.rectangle_area();
+// rec.parameter();
+rec.displayRectangle();
+
+
+class Squaer {
+    constructor(side){
+        this.side = side
+    }
+
+    squaer_area(){
+       return Math.pow(this.side, 2)
+    }
+
+    displaySquaer(){
+        document.getElementById('squaer').innerHTML = `The  area of my squaer : ${this.squaer_area()} and it has 4 sides`
+    }
+
+}
+      const sqr = new Squaer(5)
+
+      sqr.displaySquaer()
+
+      </script>
+</html>
