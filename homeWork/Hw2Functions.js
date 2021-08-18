@@ -20,10 +20,8 @@ isCharacterAVowel("a")
 
 // 4 Define a function sumArray and a function multiplyArray that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sumArray([1,2,3,4]) should return 10, and multiplyArray([1,2,3,4]) should return 24.
 
-// let sumArray  = [1,2,3,4]
-// let multiplyArray  = [1,2,3,4]
 
-const  sumArray = (array) => {
+const sumArray = (array) => {
     let sum  =  0
     for(i=0; i<array.length; i++){
         sum+=array[i]
@@ -60,13 +58,11 @@ reverseString("jag testar")
 // 7)Write a function findLongestWord that takes an array of words and returns the length of the longest one.
 
 const findLongestWord = (array) => {
-    var longestWord = array[0]
+    let longestWord = array[0]
      for(i=0;i<array.length;i++){
-       
          if(longestWord.length < array[i].length){
              longestWord = array[i]
          }
-      
      }
      console.log(longestWord)
 }

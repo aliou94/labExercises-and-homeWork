@@ -1,0 +1,68 @@
+<html>
+
+    <head>
+        <link href="styles.css" rel="stylesheet">
+        <script>
+
+            function syaHello(){
+                
+                let instruction = document.getElementById('para1').innerHTML 
+
+               if(instruction === "click here" ){
+                document.getElementById('para1').innerHTML  = "unclick"
+               } else {
+                document.getElementById('para1').innerHTML  = "click"
+             
+                return      instruction = "click here"
+               }
+              
+                
+
+                console.log(instruction)
+
+            }
+
+            const sum = (a, b) => {
+               let answer = `the sum of ${a} and ${b} is ${a+b}`
+                 console.log(answer)
+               return document.getElementById("para3").innerHTML=answer
+            }
+
+        </script>
+    </head>
+
+    <body>
+
+        <div id='container'>
+
+            <p id="para1" onclick=" syaHello(this.style.backgroundColor = 'brown') ">click here</p>
+
+
+            <p id="para2" onclick=" this.innerHTML += 'This is that other paragraph text' ">Add another paragraph here on click. </p>
+
+
+            <p id="para3" onclick="
+            sum(
+                Number(this.innerHTML.split('+')[0]),
+                Number(this.innerHTML.split('+')[1])
+            )">
+            
+            6+6
+            
+        </p>
+
+
+            <p id="para4" onclick=" alert('Hello World!') ">Say hello on click</p>
+
+
+            <p id="para5" onmouseover= " this.style.backgroundColor = 'blue' " onmouseleave=" this.style.backgroundColor = 'black' ">Change background color on mouseover</p>
+
+
+            <p id="para6" onmouseover= " this.style.color = 'orange' " onmouseleave = " this.style.color = 'white' ">Change the color of this text on mouseover</p>
+
+
+            <p id="para7" onclick=" document.getElementById('container').style.backgroundColor = 'blue' ">Change color of general area on click</p>
+        </div>
+      
+    </body>
+</html>
