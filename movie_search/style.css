@@ -119,13 +119,13 @@ html,h1,h2,h3,h4,h5,h6,a{
 
 .contact-form h1{
 	padding:2em 1px;
-	color: #F97300; 
+	color: #1a2456; 
 }
 .contact-form .right{
 	max-width: 600px;
 }
 .contact-form .right .btn-secondary{
-	background:  #F97300;
+	background:  #1a2456;
 	color: #fff;
 	border:0;
 }
