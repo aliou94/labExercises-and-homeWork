@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <title> Grid Layout</title>
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <style>
+        body {
+            margin:0;
+            background-color: #93B5C6;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display:grid;
+
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 50px 1fr 1fr 100px;
+
+            gap: 5px;
+            padding:10px;
+
+          
+        }
+
+        .container div {
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        .header {
+            grid-column-start: 1;
+            grid-column-end:4;
+            background-color: #C9CCD5;
+        }
+
+        .content1 {
+           grid-row-start: 2;
+           grid-row-end: 4;
+           grid-column-start: 1;
+           grid-column-end: 2;
+           background-color: #FFE3E3;
+           
+        
+        }
+
+        .content2 {
+           grid-row-start: 2;
+           grid-row-end: 4;
+           grid-column-start: 2;
+           grid-column-end: 4;
+           background-color: #E4D8DC;
+         
+        }
+
+        .footer {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        .navigation {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  
+  list-style: none;
+  margin: 0; 
+
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
+}
+
+
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .navigation {
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  .navigation a { 
+    text-align: center; 
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255,0.3); 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+  }
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}
+    </style> 
+    <body>
+        <div class="container">
+           
+          <div class="header">
+            
+               <ul class="navigation">
+               <li>
+                <a href="#">FeedBack</a>
+            </li>
+        
+          </ul>
+        </div>
+          <div class="content1">
+            select a category above by clicking on the button
+              <div><button style="background-color: #93B5C6;color: white;">inspirational Quotes</button></div>
+              <br/>
+              <div><button>The largest selection of dad jokes on the internet</button></div>
+              <br/>
+              <div> <button>Motivational and Inspirational quotes</button></div>
+              <br/>
+              <div><button>Programming Quotes API for open source projects</button></div>
+              <br/>
+              <div><button>Kanye West quotes</button></div>
+              <br/>
+              <div> <button>Memes on Narendra Modi</button></div>
+           
+
+          </div>
+          <div class="content2">
+            <h2 style="align-items: center;">Thougts and advice curated for you</h2>
+          </div>
+          <div class="footer">My footer</div> 
+        </div>
+    </body>
+</html>>
