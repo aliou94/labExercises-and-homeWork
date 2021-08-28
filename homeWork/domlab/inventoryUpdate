@@ -1,11 +1,11 @@
 function updateInventory(arr1, arr2) {
+
 let currInv = {}, let updateInv = {}, let newInv = {}, let items = [], let arr = []
 
 arr1.forEach((item)=>{
-      items.push(item[1])
     currInv[item[1]] = item[0]  
+     items.push(item[1])
     })
-
 
 arr2.forEach((item)=>{
     updateInv[item[1]] = item[0] 
@@ -21,9 +21,8 @@ items.forEach(
          ? newInv[item] = updateInv[item] 
          : newInv[item] = updateInv[item] + currInv[item]
     
-        if(!newInv[item]){
-        newInv[item] = currInv[item]
-         } 
+        if(!newInv[item]) newInv[item] = currInv[item]
+         
 arr[index] = [newInv[item], item  ]
           
 
